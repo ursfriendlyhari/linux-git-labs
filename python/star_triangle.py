@@ -1,4 +1,4 @@
-rows = int(input("Enter how many rows "))
+rows = int(input("Enter the number of rows for the star triangle: "))
 
 for row in range(1, rows + 1):
     # Multiplying "*" by the row number increases
