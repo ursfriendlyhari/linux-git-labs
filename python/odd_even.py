@@ -1,9 +1,11 @@
-#ODD EVEN number checker
-def odd_even(number):
+"""Classify an integer as odd or even."""
+
+
+def odd_even(number: int) -> str:
+    """Return whether ``number`` is odd or even."""
     if number % 2 == 0:
         return f"{number} is Even"
-    else:
-        return f"{number} is Odd"
+    return f"{number} is Odd"
 
 
 if __name__ == "__main__":

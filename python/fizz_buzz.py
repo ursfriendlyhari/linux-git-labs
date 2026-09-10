@@ -1,19 +1,21 @@
-limit = int(input("Enter the maximum number: "))
-for number in range(1,limit +1):
-    # Check both divisibility conditions first.
-    # A number like 15 is divisible by both 3 and 5,
-    # so this condition must come before the individual checks.
-    if number % 3 == 0 and number % 5 == 0:
-        print("FizzBuzz")
+"""Generate FizzBuzz sequences."""
 
-    # If it wasn't divisible by both, check divisibility by 3.
-    elif number % 3 == 0:
-        print("Fizz")
 
-    # Then check divisibility by 5.
-    elif number % 5 == 0:
-        print("Buzz")
+def fizz_buzz(limit: int) -> list[str]:
+    """Return the FizzBuzz values from 1 through ``limit``."""
+    values: list[str] = []
+    for number in range(1, limit + 1):
+        if number % 3 == 0 and number % 5 == 0:
+            values.append("FizzBuzz")
+        elif number % 3 == 0:
+            values.append("Fizz")
+        elif number % 5 == 0:
+            values.append("Buzz")
+        else:
+            values.append(str(number))
+    return values
 
-    # If none of the conditions match, print the number itself.
-    else:
-        print(number)
+
+if __name__ == "__main__":
+    limit = int(input("Enter the maximum number: "))
+    print("\n".join(fizz_buzz(limit)))

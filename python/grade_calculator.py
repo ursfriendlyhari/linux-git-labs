@@ -1,14 +1,17 @@
-def calculate_grade(score):
+"""Convert percentage scores into letter grades."""
+
+
+def calculate_grade(score: float) -> str:
+    """Return the letter grade for a score from 0 through 100."""
     if score < 0 or score > 100:
         return "Please enter a value between 0 and 100."
-    elif score >= 90:
+    if score >= 90:
         return "A"
-    elif score >= 80:
+    if score >= 80:
         return "B"
-    elif score >= 70:
+    if score >= 70:
         return "C"
-    else:
-        return "D"
+    return "D"
 
 if __name__ == "__main__":
     try:
